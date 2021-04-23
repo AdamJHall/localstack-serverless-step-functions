@@ -1,7 +1,17 @@
 version: "3.7"
 services:
+  offline:
+    image: aligent/serverless:offline
+    networks:
+      - localstack-net
+    command: tail -f /dev/null
+    volumes: 
+      - .:/app
+      - ~/.npm:/home/node/.npm
+      - ~/.aws:/home/node/.aws
+
   localstack:
-    image: localstack/localstack:0.12.2
+    image: localstack/localstack:0.12.7
     networks:
       - localstack-net
     ports:

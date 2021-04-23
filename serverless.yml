@@ -13,15 +13,13 @@ custom:
     target: node12
   localstack:
     debug: true
-    autostart: true
+    autostart: false
     stages:
       - dev
-    host: http://localhost
+    host: http://localstack
     edgePort: 4566
     lambda:
       mountCode: false
-    docker:
-      sudo: true
 
 plugins:
   - serverless-esbuild
