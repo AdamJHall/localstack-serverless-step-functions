@@ -1,4 +1,6 @@
 # Serverless Localstack 
+## ARCHIVED 
+This repo has been merged into https://github.com/aligent/serverless-aws-nodejs-service-template
 
 ## Introduction
 A Typescript stepfunction template with a docker based LocalStack development environment.  
